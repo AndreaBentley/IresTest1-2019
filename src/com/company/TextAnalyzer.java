@@ -46,6 +46,25 @@ public class TextAnalyzer {
         return result;
     }
 
-    public int[] countForDictionary(String[] text){}
+
+    //INCOMPLETE
+    public int[] countForDictionary(String[] text){
+        int largest = 0;
+        int counter = 0;
+
+        for (int i = 0; i < text.length; i++) {
+            for (int j = i; j < text.length ; j++) {
+                if(text[j].length() > largest){
+                    largest = text[j].length();
+                }
+
+                if(text[j].length() == largest){
+                    counter++;
+                }
+            }
+
+
+        }
+    }
 
 }

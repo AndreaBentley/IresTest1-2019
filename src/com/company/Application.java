@@ -6,14 +6,14 @@ public class Application {
 
     public static void main(String[] args) throws IOException {
 
-        String[] input ;
+        String[] input;
         StringTransformer[] stringTransformers;
         TextResult textResult;
 
-        TextAnalyzer textAnalyzer = new TextAnalyzer(input,stringTransformers);
+        //TextAnalyzer textAnalyzer = new TextAnalyzer(input,stringTransformers);
 
-        textResult = textAnalyzer.run();
-        textResult.print();
+        //textResult = textAnalyzer.run();
+        //textResult.print();
 
     }
 

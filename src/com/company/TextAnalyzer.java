@@ -46,11 +46,11 @@ public class TextAnalyzer {
         return result;
     }
 
-
-    //INCOMPLETE
     public int[] countForDictionary(String[] text){
         int largest = 0;
         int counter = 0;
+
+        TextResult textResult = new TextResult();
 
         for (int i = 0; i < text.length; i++) {
             for (int j = i; j < text.length ; j++) {
@@ -63,8 +63,11 @@ public class TextAnalyzer {
                 }
             }
 
+            textResult.dictionary[largest] = counter;
 
         }
+
+        return textResult.dictionary;
     }
 
 }

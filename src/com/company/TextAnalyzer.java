@@ -5,8 +5,8 @@ import java.io.IOException;
 public class TextAnalyzer {
 
 
-    String[] input;
-    StringTransformer[] stringTransformers;
+    private String[] input;
+    private StringTransformer[] stringTransformers;
 
     public TextAnalyzer(String[] input, StringTransformer[] stringTransformers){
         this.stringTransformers = stringTransformers;
@@ -33,12 +33,12 @@ public class TextAnalyzer {
 
     }
 
-    public int countTheTotalNumberOfWords(String[] text){
+    private int countTheTotalNumberOfWords(String[] text){
 
         int result = 0;
 
         for (int i = 0; i < text.length; i++) {
-            if( !text[i].equals(". ") && text[i].equals(", ") && text[i].equals("THIS IS THE END OF THE FILE, NO FOR REAL. NOBODY WRITE THIS SENTENCE IN THEIR FILE OR ME AND MY PROGRAM ARE SCREWED. (NO SWEARING PLEASE)"){
+            if( !text[i].equals(". ") && text[i].equals(", ") && text[i].equals("THIS IS THE END OF THE FILE, NO FOR REAL. NOBODY WRITE THIS SENTENCE IN THEIR FILE OR ME AND MY PROGRAM ARE SCREWED. (NO SWEARING PLEASE)")) {
                 result++;
             }
         }
@@ -46,7 +46,7 @@ public class TextAnalyzer {
         return result;
     }
 
-    public int[] countForDictionary(String[] text){
+    private int[] countForDictionary(String[] text){
         int largest = 0;
         int counter = 0;
 

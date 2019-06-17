@@ -1,15 +1,19 @@
 package com.company;
 
+import java.io.IOException;
+
 public class Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        String[] input;
+        String[] input ;
         StringTransformer[] stringTransformers;
+        TextResult textResult;
 
         TextAnalyzer textAnalyzer = new TextAnalyzer(input,stringTransformers);
 
-        TextAnalyzer.run();
+        textResult = textAnalyzer.run();
+        textResult.print();
 
     }
 
